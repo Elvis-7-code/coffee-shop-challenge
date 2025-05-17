@@ -11,6 +11,5 @@ class Customer:
         if not isinstance(value, str):
             raise ValueError("Name must be a string")
         self._name = value
- 
-
-
+        
+        else:
