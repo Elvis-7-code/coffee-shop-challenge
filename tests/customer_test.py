@@ -7,3 +7,15 @@ class TestCustomer:
     def test_customer_has_name_property(self):
         customer = Customer("Elvis")
         assert customer.name == "Elvis"
+
+    def test_customer_name_setter_validation(self):
+        with pytest.raises(Exception):  
+            Customer(123)
+
+        with pytest.raises(Exception):
+            Customer("")
+
+        with pytest.raises(Exception)
+            Customer("A" * 16)
+
+                      
