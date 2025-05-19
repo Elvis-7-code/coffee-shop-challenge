@@ -18,4 +18,7 @@ print(f"Average price for {latte.name}: {latte.average_price()}")
 print("Customers who ordered Latte:")
 for customer in latte.customers():
     print(customer.name)
-    
+
+print("\norders made by Elviss:") 
+for order in c1.orders():
+    print(f"{order.coffee.name} :${order.price}")   
