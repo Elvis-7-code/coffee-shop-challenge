@@ -14,3 +14,8 @@ o3 = Order(c1, latte, 4.0)
 
 print(f"{latte.name} has {latte.num_orders()} orders.")
 print(f"Average price for {latte.name}: {latte.average_price()}")
+
+print("Customers who ordered Latte:")
+for customer in latte.customers():
+    print(customer.name)
+    
