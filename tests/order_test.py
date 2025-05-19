@@ -21,4 +21,6 @@ def test_valid_order_creation():
 def test_invalid_customer_type():
     coffee = Coffee("Mocha")
     with pytest.raises(TypeError):
-        Order("not_a_customer", coffee, 5.0)    
+        Order("not_a_customer", coffee, 5.0) 
+
+def test_invalid_coffee           
