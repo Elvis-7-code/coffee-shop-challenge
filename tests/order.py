@@ -24,3 +24,8 @@ class Order:
         def customer(self):
             return self._customer
         
+        @property
+        def coffee(self):
+            return self._coffee
+        
+        
