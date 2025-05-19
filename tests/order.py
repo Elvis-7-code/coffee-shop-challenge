@@ -28,4 +28,7 @@ class Order:
         def coffee(self):
             return self._coffee
         
+        @classmethod
+        def orders(cls, coffee):
+            return[order for order in cls.all_orders if order.coffee == coffee]
         
