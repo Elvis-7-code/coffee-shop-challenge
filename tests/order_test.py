@@ -23,4 +23,7 @@ def test_invalid_customer_type():
     with pytest.raises(TypeError):
         Order("not_a_customer", coffee, 5.0) 
 
-def test_invalid_coffee           
+def test_invalid_coffee_type():
+    customer = Customer("Jane")
+    with pytest.raises(TypeError):
+        Order(customer, "not_a_coffee", 5.0)        
