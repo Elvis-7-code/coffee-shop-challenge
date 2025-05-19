@@ -16,9 +16,10 @@ class Customer:
         self._name = value
 
     def create_order(self, coffee, price):
-        return order(self, coffee, price)
+        return Order(self, coffee, price)
     
-    def orders
+    def orders(self):
+        return [order for order in Order.all_orders if order.customer == self]
     
 
     
