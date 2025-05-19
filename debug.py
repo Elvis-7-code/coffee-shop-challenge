@@ -8,3 +8,7 @@ c2 = Customer("Tina")
 latte = Coffee("Latte")
 mocha = Coffee("Mocha")
 
+o1 = Order(c1, latte, 4.5)
+o2 = Order(c2, mocha, 5.0)
+o3 = Order(c1, latte, 4.0)
+
