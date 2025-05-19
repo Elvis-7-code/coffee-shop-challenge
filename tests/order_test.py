@@ -17,3 +17,8 @@ def test_valid_order_creation():
     assert order.coffee == coffee
     assert order.price == 4.5
     assert order in Order.all_orders  
+
+def test_invalid_customer_type():
+    coffee = Coffee("Mocha")
+    with pytest.raises(TypeError):
+        Order("not_a_customer", coffee, 5.0)    
