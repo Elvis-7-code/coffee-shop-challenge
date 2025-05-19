@@ -20,3 +20,7 @@ class Order:
         def price(self):
             return self._price
         
+        @property
+        def customer(self):
+            return self._customer
+        
