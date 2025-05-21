@@ -1,5 +1,5 @@
 import pytest
-from coffee import Coffee
+from coffee_shop_challenge.coffee import Coffee
 from customer import Customer
 from order import Order
 

@@ -15,7 +15,7 @@ class TestCustomer:
         with pytest.raises(Exception):
             Customer("")
 
-        with pytest.raises(Exception)
+        with pytest.raises(Exception):
             Customer("A" * 16)
 
     def test_customer_orders_returns_all_orders_and_coffees(self):
