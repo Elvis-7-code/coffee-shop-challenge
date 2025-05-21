@@ -1,6 +1,6 @@
-from customer import Customer
-from coffee import Coffee
-from order import Order
+from coffee_shop_challenge.customer import Customer
+from coffee_shop_challenge.coffee import Coffee
+from coffee_shop_challenge.order import Order
 
 c1 = Customer("Elviss")
 c2 = Customer("Tina")

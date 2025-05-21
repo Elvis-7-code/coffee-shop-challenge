@@ -1,4 +1,4 @@
-from order import Order
+from coffee_shop_challenge.order import Order
 class Coffee:
     def __init__(self, name):
         if not isinstance(name, str):

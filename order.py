@@ -1,4 +1,4 @@
-from coffee import Coffee  # Import the Coffee class from the appropriate module
+from coffee_shop_challenge.coffee import Coffee  # Import the Coffee class from the appropriate module
 
 class Order:
     all_orders = []
