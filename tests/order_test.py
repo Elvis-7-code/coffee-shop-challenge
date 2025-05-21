@@ -1,7 +1,7 @@
 import pytest
-from order import Order
-from customer import Customer
-from coffee import Coffee
+from coffee_shop_challenge.order import Order
+from coffee_shop_challenge.customer import Customer
+from coffee_shop_challenge.coffee import Coffee
 
 # Clear all orders before each test manually (no pytest fixtures for now)
 def test_can_create_valid_order():
