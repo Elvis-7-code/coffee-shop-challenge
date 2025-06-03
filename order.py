@@ -1,36 +1,39 @@
-from coffee_shop_challenge.coffee import Coffee  # Import the Coffee class from the appropriate module
-
 class Order:
-    all_orders = []
     def __init__(self, customer, coffee, price):
-        if not isinstance(customer, Customer):
-            raise TypeError("customer must be a Customer instance")
-        if not isinstance(coffee, Coffee):
-            raise TypeError("coffee must be a Coffee instance")
-        if not isinstance(price, (float, int)) or not (1.0 <= price <= 10.0):  
-            raise ValueError("price must be a number between 1.0 and 10.0")
-        
-        self.customer = customer
-        self.coffee = coffee
-        self.price = price
+        from customer import Customer
+        from coffee import Coffee
 
-        Order.all_orders.append(self)
+        if type(customer) is not Customer:
+            raise TypeError("Expected a Customer instance for customer")
+        if type(coffee) is not Coffee:
+            raise TypeError("Expected a Coffee instance for coffee")
+
+        try:
+            price = float(price)
+        except ValueError:
+            raise TypeError("Price must be a float")
+
+        if price < 1.0 or price > 10.0:
+            raise ValueError("Price must be between 1.0 and 10.0")
+
+        self.__customer = customer
+        self.__coffee = coffee
+        self.__price = price
+
+        @property
+        def customer(self):
+            return self.__customer
+
+        @property
+        def coffee(self):
+            return self.__coffee
 
         @property
         def price(self):
-            return self._price
-        
-        @property
-        def customer(self):
-            return self._customer
-        
-        @property
-        def coffee(self):
-            return self._coffee
-        
-        @classmethod
-        def orders(cls, coffee):
-            return[order for order in cls.all_orders if order.coffee == coffee]
-        
-        #Order.py completed!
-        
+            return self.__price
+                 
+        if hasattr(customer, "_log_order"):
+            customer._log_order(self)
+
+        if hasattr(coffee, "_log_order"):
+            coffee._log_order(self)
